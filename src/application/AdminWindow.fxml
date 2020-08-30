@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="700.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminWindowController">
+   <children>
+      <AnchorPane layoutY="-14.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-14.0">
+         <children>
+            <AnchorPane prefHeight="119.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane prefHeight="151.0" prefWidth="387.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="28.0" prefHeight="75.0" prefWidth="349.0" text="Library Management System" textAlignment="CENTER" textFill="#2318a1">
+                           <font>
+                              <Font name="Constantia" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="37.0" layoutY="86.0" prefHeight="17.0" prefWidth="170.0" text="Administrator Panel" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="387.0" layoutY="14.0" prefHeight="119.0" prefWidth="612.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ButtonBar layoutX="14.0" layoutY="60.0" prefHeight="40.0" prefWidth="482.0">
+                          <buttons>
+                              <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#showDashboard" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #327ae6; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Dashboard" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#showRegister" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #327ae6; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Register" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnRemove" mnemonicParsing="false" onAction="#showRemove" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: #327ae6; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Remove" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                          </buttons>
+                        </ButtonBar>
+                        <Button fx:id="btnLogout" layoutX="538.0" layoutY="47.0" mnemonicParsing="false" onAction="#logoutUser" style="-fx-background-color: #f50247;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="119.0" prefHeight="597.0" prefWidth="1000.0" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="119.0">
+               <children>
+                  <AnchorPane fx:id="pnlRegister" layoutX="24.0" layoutY="11.0" prefHeight="555.0" prefWidth="972.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="423.0" prefHeight="40.0" prefWidth="127.0" text="Register User" AnchorPane.leftAnchor="423.0" AnchorPane.rightAnchor="422.0">
+                           <font>
+                              <Font name="Constantia" size="18.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutY="42.0" prefHeight="527.0" prefWidth="972.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                           <children>
+                              <Label layoutX="39.0" layoutY="46.0" prefHeight="40.0" prefWidth="110.0" style="-fx-margin: 10px;" text="First Name : *" AnchorPane.leftAnchor="39.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="txtFirstName" layoutX="187.0" layoutY="46.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;" AnchorPane.leftAnchor="187.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <Label layoutX="544.0" layoutY="46.0" prefHeight="40.0" prefWidth="94.0" style="-fx-margin: 10px;" text="Last Name : " AnchorPane.leftAnchor="544.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="txtLastName" layoutX="659.0" layoutY="46.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;" AnchorPane.leftAnchor="659.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <Label layoutX="39.0" layoutY="120.0" prefHeight="40.0" prefWidth="110.0" style="-fx-margin: 10px;" text="Date of Birth" AnchorPane.leftAnchor="39.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label layoutX="544.0" layoutY="120.0" prefHeight="40.0" prefWidth="77.0" style="-fx-margin: 10px;" text="Address : " AnchorPane.leftAnchor="544.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="txtAddress" layoutX="659.0" layoutY="120.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;" AnchorPane.leftAnchor="659.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <Label layoutX="39.0" layoutY="195.0" prefHeight="40.0" prefWidth="110.0" style="-fx-margin: 10px;" text="Phone :  *" AnchorPane.leftAnchor="39.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="txtPhone" layoutX="187.0" layoutY="195.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <DatePicker fx:id="dobSelect" layoutX="187.0" layoutY="120.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;" AnchorPane.leftAnchor="187.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </DatePicker>
+                              <Label layoutX="544.0" layoutY="195.0" prefHeight="40.0" prefWidth="77.0" style="-fx-margin: 10px;" text="E-mail : " AnchorPane.leftAnchor="544.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="txtEmail" layoutX="659.0" layoutY="195.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;" AnchorPane.leftAnchor="659.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <Label layoutX="39.0" layoutY="270.0" prefHeight="40.0" prefWidth="110.0" style="-fx-margin: 10px;" text="Username :  *" AnchorPane.leftAnchor="39.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="txtUsername" layoutX="187.0" layoutY="270.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;" AnchorPane.leftAnchor="187.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                              <Label layoutX="544.0" layoutY="270.0" prefHeight="40.0" prefWidth="94.0" style="-fx-margin: 10px;" text="Password :  *" AnchorPane.leftAnchor="544.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <PasswordField fx:id="txtPassword" layoutX="659.0" layoutY="270.0" prefHeight="40.0" prefWidth="299.0" AnchorPane.leftAnchor="659.0" />
+                              <Label layoutX="41.0" layoutY="346.0" prefHeight="40.0" prefWidth="146.0" style="-fx-margin: 10px;" text="Confirm Password :  *" AnchorPane.leftAnchor="41.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <PasswordField fx:id="txtConfirmPassword" layoutX="187.0" layoutY="346.0" prefHeight="40.0" prefWidth="299.0" AnchorPane.leftAnchor="187.0" />
+                              <Label layoutX="544.0" layoutY="346.0" prefHeight="40.0" prefWidth="110.0" style="-fx-margin: 10px;" text="Role : " AnchorPane.leftAnchor="544.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <Button fx:id="btnAddUser" layoutX="379.0" layoutY="450.0" mnemonicParsing="false" onAction="#addUser" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #327ae6; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Add" textFill="WHITE" AnchorPane.leftAnchor="379.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnResetUser" layoutX="544.0" layoutY="450.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #f50247; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Reset" textFill="WHITE" AnchorPane.leftAnchor="544.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <RadioButton fx:id="rbtnAdmin" layoutX="659.0" layoutY="346.0" mnemonicParsing="false" prefHeight="40.0" selected="true" text="Administrator">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="group1" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rbtnLibrarian" layoutX="794.0" layoutY="346.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="77.0" text="Librarian" toggleGroup="$group1" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pnlRemove" layoutX="34.0" layoutY="21.0" prefHeight="555.0" prefWidth="972.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="423.0" prefHeight="40.0" prefWidth="127.0" text="Remove User" AnchorPane.leftAnchor="423.0" AnchorPane.rightAnchor="422.0">
+                           <font>
+                              <Font name="Constantia" size="18.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutY="42.0" prefHeight="527.0" prefWidth="972.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <children>
+                              <Button fx:id="btnDeleteUser" layoutX="575.0" layoutY="450.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #f50247; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Delete User" textFill="WHITE" AnchorPane.leftAnchor="575.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <AnchorPane prefHeight="413.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <TableView fx:id="tblUsers" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="tblUserId" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="tblFirstName" prefWidth="112.0" text="First Name" />
+                                          <TableColumn fx:id="tblLastName" prefWidth="131.0" text="Last Name" />
+                                          <TableColumn fx:id="tblPhone" minWidth="0.0" prefWidth="117.0" text="Phone" />
+                                          <TableColumn fx:id="tblEmail" prefWidth="193.0" text="Email" />
+                                          <TableColumn fx:id="tblUsername" prefWidth="165.0" text="Username" />
+                                          <TableColumn fx:id="tblRole" prefWidth="174.0" text="Role" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="53.0" layoutY="450.0" prefHeight="40.0" prefWidth="110.0" style="-fx-margin: 10px;" text="User Id : ">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="txtUserId" layoutX="201.0" layoutY="450.0" prefHeight="40.0" prefWidth="299.0" style="-fx-margin: 10px;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pnlDashboard" layoutX="14.0" layoutY="1.0" prefHeight="555.0" prefWidth="972.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="423.0" layoutY="-1.0" prefHeight="40.0" prefWidth="127.0" text="Dashboard" AnchorPane.leftAnchor="423.0" AnchorPane.rightAnchor="422.0">
+                           <font>
+                              <Font name="Constantia" size="18.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="14.0" layoutY="39.0" prefHeight="514.0" prefWidth="944.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                           <children>
+                              <TableView fx:id="tblDashUser" layoutX="228.0" layoutY="103.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                <columns>
+                                  <TableColumn fx:id="tblDashId" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="tblDashFirstName" prefWidth="104.0" text="First Name" />
+                                    <TableColumn fx:id="tblDashLastName" prefWidth="140.0" text="Last Name" />
+                                    <TableColumn fx:id="tblDashPhone" prefWidth="106.0" text="Phone" />
+                                    <TableColumn fx:id="tblDashEmail" prefWidth="164.0" text="Email" />
+                                    <TableColumn fx:id="tblDashUsername" prefWidth="161.0" text="Username" />
+                                    <TableColumn fx:id="tblDashRole" prefWidth="165.0" text="Role" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
